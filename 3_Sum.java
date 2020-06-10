@@ -1,7 +1,9 @@
-// use one fixed number and two pointer
+// use one fixed number and two pointer to find the sum of rest two number
+// bigO O(n^2)
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
+        // sort nums 
         Arrays.sort(nums);
         // condition that is not able to find three sum
         int length = nums.length;
