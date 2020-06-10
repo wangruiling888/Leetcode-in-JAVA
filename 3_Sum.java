@@ -1,5 +1,6 @@
 // use one fixed number and two pointer to find the sum of rest two number
 // bigO O(n^2)
+// rather than brute force, we can use two pointer to reduce the time complexity
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
