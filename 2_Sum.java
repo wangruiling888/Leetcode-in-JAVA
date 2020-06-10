@@ -37,3 +37,30 @@ class Solution {
         return result;
     }
 }
+
+// method 3:
+// if required result is not index but element itself, sort and two pointer method in 3-Sum 
+// can also be used for solution
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int[] result = new int[2];
+        Arrays.sort(nums);
+        for (int i = 0; i < nums.length; i++){
+            System.out.println(nums[i]);
+        }
+        int start = 0;
+        int end = nums.length - 1;
+        while (start < end){
+            if (nums[start] + nums[end] == target){
+                result[0] = start;
+                result[1] = end;
+                return result;
+            }
+            else if (nums[start] + nums[end] < target){
+                start ++;
+            }
+            else end --;
+        }
+        return result;
+    }
+}
