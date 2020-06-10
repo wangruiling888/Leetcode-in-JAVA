@@ -1,6 +1,6 @@
 # Leetcode-in-JAVA
 # Sum_Problem
-leetcode 1  TwoSum \n
-leetcode 15 ThreeSum
-leetcode 16 ThreeSumCloset
-leetcode 39 CombinationSum
+leetcode 1  TwoSum </br>
+leetcode 15 ThreeSum</br>
+leetcode 16 ThreeSumCloset</br>
+leetcode 39 CombinationSum</br>
