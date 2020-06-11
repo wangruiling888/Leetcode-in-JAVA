@@ -32,3 +32,52 @@ class Solution {
         return l1;
     }
 }
+
+// method 2: combine all iteration into one
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        ListNode head = l1;
+        ListNode prev = null;
+        int carry = 0;
+        while (l1 != null || l2 != null){
+            if (l1 != null && l2 != null){
+                int sum = l1.val + l2.val + carry;
+                l1.val = sum % 10;
+                carry = sum /10;
+                prev = l1;
+                l1 = l1.next;
+                l2 = l2.next;
+            }
+            else if (l1 == null){
+                int sum = l2.val + carry;
+                l2.val = sum % 10;
+                prev.next = l2;
+                carry = sum / 10;
+                prev = prev.next;
+                l2 = l2.next;  
+            }
+            else{
+                int sum = l1.val + carry;
+                l1.val = sum %10;
+                carry = sum/10;
+                prev = l1;
+                l1 = l1.next;
+            }
+        }
+        if (carry == 1){
+            prev.next = new ListNode(1);
+            prev = prev.next;
+        }
+        return head;
+    }
+}
