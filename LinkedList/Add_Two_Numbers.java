@@ -2,6 +2,16 @@
 // The digits are stored in reverse order and each of their nodes contain a single digit.
 // Add the two numbers and return it as a linked list.
 // method 1: easy to understand but cost much computation
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode node1 = l1;
@@ -34,16 +44,7 @@ class Solution {
 }
 
 // method 2: combine all iteration into one
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
- */
+
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode head = l1;
