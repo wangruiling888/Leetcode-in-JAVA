@@ -8,3 +8,6 @@ leetcode 39 CombinationSum</br>
 leetcode 2 Add Two Numbers </br>
 leetcode 24 Swap Nodes in Pairs </br>
 leetcode 25 Reverse Nodes in k-Group </br>
+# Stack
+leetcode 71 Simplify Path </br>
+leetcode 94 Binary Tree Inorder Traversal </br>
