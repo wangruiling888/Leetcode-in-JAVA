@@ -30,3 +30,31 @@ class Solution {
     }
    
 }
+// method 2 use ArrayList to store each of the word and assign the pointer to limit the valid folder
+class Solution {  
+    public String simplifyPath(String path) {
+        ArrayList<String> list = new ArrayList<String>();
+        int length = 0;
+        String words[] = path.split("/");
+        for (String word: words){
+            if (word.equals("..")){
+                if (length > 0){
+                    System.out.println("pop "+ list.get(length - 1));
+                    length --;
+                } 
+            }
+            else if (word.equals(".") || word.equals("")) continue;
+            else{
+               list.add(length, word);
+               length++;
+            } 
+        }
+        if (length == 0) return "/";
+        String result = "";
+        for (int i = 0; i < length; i++){
+            result += "/";
+            result += list.get(i);
+        }
+        return result;
+    } 
+}
